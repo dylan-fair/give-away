@@ -16,7 +16,7 @@ Item.init({
             len: [0, 50]
         }
     },
-    number: {
+    rating: {
         type: DataTypes.INTEGER,
         allowNull: false
     }
