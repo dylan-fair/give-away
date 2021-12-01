@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 
 class Review extends Model {}
 
-Item.init({
+Review.init({
     id: {
         type:DataTypes.INTEGER,
         allowNull: false,
@@ -25,7 +25,7 @@ Item.init({
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'comment'
+    modelName: 'review'
 }
 
 )
