@@ -13,7 +13,7 @@ Item.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    rating: {
+    review_rating: {
         type: DataTypes.INTEGER,
         references: {
             model: 'review',
