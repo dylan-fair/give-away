@@ -15,8 +15,9 @@ Review.belongsTo(User, {
     foreignKey: 'user_id'
 })
 Item.hasMany(Review, {
-    foreignKey: 'item_id'
 })
 Review.belongsTo(Item, {
     foreignKey: 'item_id'
 })
+
+module.exports = {User, Item, Review}
