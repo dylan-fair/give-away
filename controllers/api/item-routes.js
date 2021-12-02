@@ -4,7 +4,7 @@ const { User, Item, Review } = require("../../models");
 
 router.get("/", (req, res) => {
   Item.findAll({
-    attributes: ["id", "name", "review_rating"],
+    attributes: ["id", "name"],
     include: [
       {
         model: Review,
