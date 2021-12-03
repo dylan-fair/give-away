@@ -1,17 +1,8 @@
 
 <div class="card-container">
+  {{#each items as |item|}}
 
+{{> item-list item}}
 
-<div class="card" style="width: 13rem;">
-  <img src="/img/400x400.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-      <h3 class="title"> banana</h3>
-    <p class="card-text">I am currently selling this picture of a banana as an NFT </p>
-    <p class="meta">
-        <span class="posted-user">Jovan</span>
-         <span class="post-date">Posted :01/15/1999</span>
-        </p>
-  </div>
-</div>
-
+{{/each}}
 </div>
