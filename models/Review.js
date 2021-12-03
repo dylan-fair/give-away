@@ -28,13 +28,13 @@ Review.init({
             key: 'id'
         },
     },
-    item_id:{
-        type: DataTypes.INTEGER,
-        references:{
-            model: 'item',
-            key: 'id'
-        },
-    },
+    // item_id:{
+    //     type: DataTypes.INTEGER,
+    //     references:{
+    //         model: 'item',
+    //         key: 'id'
+    //     },
+    //},
 },
 {
     sequelize,
