@@ -26,6 +26,29 @@ router.get('/', (req,res)=>{
     console.log(err)
     })
 })
+
+
+router.get('/login',(req,res)=>{
+    if(req.session.LoggedIn){
+        res.redirect('/');
+        return
+    }
+    
+    res.render('login')
+})
+
+
+
+router.get('/logout',(req,res)=>{
+    if(req.session.LoggedIn){
+     req.session.destroy(()=>{
+         res.status(204).end()
+     });
+    }else{
+        res.status(404).end
+    }
+})
+
 router.get('/login', (req, res) => {
     res.render('login');
 })
