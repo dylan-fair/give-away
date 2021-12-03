@@ -1,9 +1,6 @@
 const seedUsers = require('./user-seeds');
 const seedItems = require('./item-seeds');
 const seedReviews = require('./review-seeds');
-
-
-
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {

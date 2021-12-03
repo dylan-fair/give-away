@@ -15,6 +15,8 @@ router.post("/", (req, res) => {
     Review.create({
       context: req.body.context,
       rating: req.body.rating,
+      user_id: req.body.user_id,
+      //item_id: req.body.item_id
     })
       .then((dbReviewData) => res.json(dbReviewData))
       .catch((err) => {
