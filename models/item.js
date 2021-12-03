@@ -15,6 +15,13 @@ Item.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    url:{
+type: DataTypes.STRING,
+allowNull: false,
+validate:{
+  isUrl: true
+}
+    },
     item_text: {
       type: DataTypes.STRING,
       allowNull: false,
