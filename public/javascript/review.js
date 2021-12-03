@@ -1,7 +1,8 @@
 async function reviewItem(event) {
     event.preventDefault();
                                             //add in actuall text area name
-    const reviewText = document.querySelector('textarea[name="review-body"]').value.trim()
+    const reviewText = document.querySelector('textarea[name="review-body"]').value.trim();
+    const rating = document.querySelector('#rating').value;
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
@@ -10,7 +11,8 @@ async function reviewItem(event) {
             method: 'POST',
             body: JSON.stringify({
                 id,
-                reviewText
+                reviewText,
+                rating
             }),
             headers: {'Content-Type': 'application/json'}
         });
@@ -21,3 +23,5 @@ async function reviewItem(event) {
         }
     }
 }
+
+document.addEventListener('submit', reviewItem)
