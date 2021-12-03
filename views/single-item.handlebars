@@ -1,0 +1,27 @@
+{{ post-info post }}
+
+{{#if loggedIn}}
+<form class="review-form">
+  <div>
+    <textarea name="review-body"></textarea>
+    <select name="reviews" id="rating">
+      <option value="1">1-star</option>
+      <option value="2">2-star</option>
+      <option value="3">3-star</option>
+      <option value="4">4-star</option>
+      <option value="5">5-star</option>
+</select>
+  </div>
+
+  <div>
+    <button type="submit">add review</button>
+    <button type="button" class="upvote-btn"></button>
+  </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/review.js"></script>
+{{/if}}

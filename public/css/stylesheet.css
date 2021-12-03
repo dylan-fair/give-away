@@ -221,3 +221,16 @@ form .text {
   text-transform: uppercase;
 }
 /* SUBJECT TO CHANGE */
+
+/* CREATE FORM */
+.form-floating {
+  margin: 2rem;
+}
+.create-h1 {
+  text-align: center;
+}
+
+.btn {
+  justify-content: center;
+}
+/* CREATE FORM */
