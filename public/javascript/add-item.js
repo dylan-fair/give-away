@@ -24,6 +24,3 @@ if(name && url && itemtext){
 }
 
 document.querySelector('.aBtn').addEventListener('click', newItem)
-
-
-document.querySelector('#create-btn').addEventListener('submit', newItem)
