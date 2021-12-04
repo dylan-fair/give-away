@@ -2,19 +2,31 @@
         <center>
         <h1 class="create-h1">Create New Listing</h1>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingUrl" placeholder="Enter Url">
+            <input type="text" class="urlInput" id="floatingUrl" placeholder="Enter Url">
             <label for="floatingUrl">Url</label>
           </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingTitle" placeholder="title">
+            <input type="text" class="titleInput" id="floatingTitle" placeholder="title">
             <label for="floatingTitle">Title</label>
           </div>
           <div class="form-floating">
-            <input type="text" class="form-control" id="floatingText" placeholder="Text">
+            <input type="text" class="textInput" id="floatingText" placeholder="Text">
             <label for="floatingText">Text</label>
           </div>
           <div class="a-grid">
-            <button class="btn btn-primary" type="button">Create</button>
+            <button class="btn btn-primary create-btn" id="create-btn" type="submit">Create</button>
+            <button type="button" class="aBtn">Test btn</button>
           </div>
           </center>
           <h2>Your Posts:</h2>
+  
+
+<div class="card-container">
+  {{#each items as |item|}}
+
+{{> item-list item}}
+
+{{/each}}
+</div>
+
+          <script src="/javascript/add-item.js"></script>

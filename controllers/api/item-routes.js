@@ -4,7 +4,7 @@ const { User, Item, Review } = require("../../models");
 
 router.get("/", (req, res) => {
   Item.findAll({
-    attributes: ["id", "name", "url", "user_id"],
+    attributes: ["id", "name", "url","item_text", "user_id"],
     include: [
       {
         model: Review,
@@ -54,7 +54,6 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  // expects {title: 'Taskmaster goes public!', item_url: 'https://taskmaster.com/press', user_id: 1}
   if (req.session) {
     Item.create({
       name: req.body.name,

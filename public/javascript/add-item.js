@@ -1,9 +1,11 @@
 async function newItem(event) {
     event.preventDefault();
-    const name = document.querySelector('input[name="item-name"]').value;
-    const url = document.querySelector('input[name="item-url"]').value;
-    const itemtext = document.querySelector('input[name="item-text"]').value;
-
+    const name = document.querySelector('.titleInput').value.trim();
+    const url = document.querySelector('.urlInput').value.trim();
+    const itemtext = document.querySelector('.textInput').value.trim();
+    console.log('It Works!')
+if(name && url && itemtext){
+   
     const response = await fetch('/api/items', {
         method: 'POST',
         body: JSON.stringify({
@@ -14,10 +16,14 @@ async function newItem(event) {
         headers: {'Content-Type': 'application/json'}
     });
     if(response.ok){
-        document.location.replace('/')
+        document.location.replace('/dashboard')
     } else {
         alert(response.statusText)
     }
 }
+}
 
-document.querySelector('.new-item-form').addEventListener('submit', newItem)
+document.querySelector('.aBtn').addEventListener('click', newItem)
+
+
+document.querySelector('#create-btn').addEventListener('submit', newItem)
