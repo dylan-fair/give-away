@@ -4,7 +4,7 @@ const { Item, User, Review} = require('../models');
 
 
 router.get('/', (req,res)=>{
-    console.log(req.session)
+    console.log('Hello')
     Item.findAll({
         where:{
           user_id: req.session.user_id
