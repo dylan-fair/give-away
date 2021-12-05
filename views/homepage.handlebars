@@ -1,4 +1,17 @@
+{{#if loggedIn}}
 
+<center>
+  <h2>User GiveAways!</h2>
+  </center>
+<div class="card-container">
+
+  {{#each items as |item|}}
+
+{{> item-list item}}
+
+{{/each}}
+</div>
+{{else}}
 <center>
 <div  class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -42,3 +55,4 @@
 
 {{/each}}
 </div>
+{{/if}}
