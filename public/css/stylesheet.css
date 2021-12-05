@@ -13,7 +13,7 @@ header {
 }
 footer {
   margin-top: 100%;
-  position: absolute;
+  position: relative;
   width: 100%;
   background-color: #fff;
   text-align: center;
@@ -267,6 +267,8 @@ form .text {
   width: 80%;
 }
 /* CREATE FORM */
+
+/* Carousel  */
 .carousel {
   margin-bottom: 5rem;
 }
@@ -290,5 +292,6 @@ form .text {
   padding: 15px;
   border-radius: 5px;
   color: white;
-  background-color: violet;
+  background-color: rgb(58, 150, 255);
 }
+/* Carousel  */

@@ -10,16 +10,16 @@
 </head>
 <body>
     <header>
-<img  class="logo" src="/img/logo-file.png">
+<a href="/"><img  class="logo" src="/img/logo-file.png"></a>
 <nav >
 <ul class="links">
     <li><a href="/">Home</a></li>
-
+  {{#if loggedIn}}
     <li><a href="/dashboard">Create Listing</a></li>
     
 </ul>
 </nav>
-    {{#if loggedIn}}
+  
 <a href=""><button type="button" id="logout"class="login-btn logout">Logout</button></a>
 {{else}}
 
