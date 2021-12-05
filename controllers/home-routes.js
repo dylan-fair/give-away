@@ -20,7 +20,10 @@ router.get('/', (req,res)=>{
     .then(itemData =>{
         console.log(itemData)
         const items = itemData.map(item=> item.get({plain: true}))
-        res.render('homepage', {items})
+        res.render('homepage', {
+            items,
+            loggedIn: req.session.loggedIn
+        })
     })
     .catch(err=>{
     console.log(err)
@@ -29,7 +32,7 @@ router.get('/', (req,res)=>{
 
 
 router.get('/login',(req,res)=>{
-    if(req.session.LoggedIn){
+    if(req.session.loggedIn){
         res.redirect('/');
         return
     }
@@ -40,7 +43,7 @@ router.get('/login',(req,res)=>{
 
 
 router.get('/logout',(req,res)=>{
-    if(req.session.LoggedIn){
+    if(req.session.loggedIn){
      req.session.destroy(()=>{
          res.status(204).end()
      });

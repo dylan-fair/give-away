@@ -236,4 +236,34 @@ form .text {
 .btn {
   justify-content: center;
 }
+.cForm-container {
+  width: 50%;
+  height: 100vh;
+  float: left;
+}
+
+#floatingUrl {
+  height: 50px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+#floatingTitle {
+  height: 50px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+#floatingText {
+  height: 50px;
+  width: 100%;
+  border-radius: 15px;
+}
+.aBtn {
+  margin-left: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+}
 /* CREATE FORM */

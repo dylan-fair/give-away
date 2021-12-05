@@ -2,16 +2,16 @@ async function newItem(event) {
     event.preventDefault();
     const name = document.querySelector('.titleInput').value.trim();
     const url = document.querySelector('.urlInput').value.trim();
-    const itemtext = document.querySelector('.textInput').value.trim();
+    const item_text = document.querySelector('.textInput').value.trim();
     console.log('It Works!')
-if(name && url && itemtext){
+if(name && url && item_text){
    
     const response = await fetch('/api/items', {
         method: 'POST',
         body: JSON.stringify({
             name,
             url,
-            itemtext
+            item_text
         }),
         headers: {'Content-Type': 'application/json'}
     });

@@ -23,7 +23,7 @@ router.get('/', (req,res)=>{
     .then(itemData =>{
         console.log(itemData)
         const items = itemData.map(item=> item.get({plain: true}))
-        res.render('dashboard', {items})
+        res.render('dashboard', {items, loggedIn: true})
     })
     .catch(err=>{
     console.log(err)

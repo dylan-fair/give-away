@@ -108,6 +108,7 @@ router.post("/login", (req, res) => {
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
+      console.log('Works')
       res.status(204).end();
     });
   } else {
@@ -115,11 +116,8 @@ router.post("/logout", (req, res) => {
   }
 });
 
-// PUT api/users/:id
 router.put("/:id", (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
 
-  // pass in req.body instead to only update what's passed through
   User.update(req.body, {
     individualHooks: true,
     where: {
