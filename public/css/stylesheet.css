@@ -238,7 +238,7 @@ form .text {
 }
 .cForm-container {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   float: left;
 }
 
@@ -267,3 +267,28 @@ form .text {
   width: 80%;
 }
 /* CREATE FORM */
+.carousel {
+  margin-bottom: 5rem;
+}
+
+.carousel-item {
+  height: 32rem;
+  background: rgba(104, 153, 137, 1);
+  color: white;
+  position: relative;
+}
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+}
+
+.carouselBtn {
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  background-color: violet;
+}
