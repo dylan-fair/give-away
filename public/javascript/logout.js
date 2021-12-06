@@ -10,4 +10,4 @@ async function logout() {
     }
 }
 
-document.querySelector('#logout').addEventListener('submit', logout)
+document.querySelector('#logout').addEventListener('click', logout)
