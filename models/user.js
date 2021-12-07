@@ -38,6 +38,17 @@ User.init(
       validate: {
         len: [4]
       }
+    },
+    profile_pic: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: `https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png` 
+    },
+    profile_desc:{
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, maxime magnam. Cupiditate sed soluta incidunt aperiam voluptate. Cum excepturi officia omnis sequi, perferendis sunt obcaecati quasi neque officiis accusantium quod!"
+
     }
   },
   {

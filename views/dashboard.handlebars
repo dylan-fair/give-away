@@ -1,5 +1,4 @@
 
- 
           <div class="cForm-container">
                <a href="/"> &larr; Back to Home</a>
             <center>
@@ -18,13 +17,24 @@
           </div>
         </center>
           </div>
-          <h2>Your Posts:</h2>
-  
+          <h2>{{items.user.username}}'s Posts: </h2>  <a href="/dashboard/profile/">  Go to Your Profile &rarr;</a>
+
+
+
 
 <div class="card-container">
   {{#each items as |item|}}
-
-{{> item-list item}}
+<div class="card" style="width: 13rem;">
+  <img src="{{url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+      <h5 class="title"> {{name}}</h5>
+    <p class="card-text">{{item_text}} </p>
+    <p class="meta">
+       <a href="/profile{{user.id}}"> <span class="posted-user">{{user.username}}</span></a>
+         <span class="post-date">Posted {{format_date createdAt}}</span>
+        </p>
+  </div>
+</div>
 
 {{/each}}
 </div>
