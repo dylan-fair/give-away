@@ -1,6 +1,6 @@
 const User = require('./User');
 const Item = require('./Item');
-const Review = require('./Review')
+const Comment = require('./Comment')
 
 User.hasMany(Item, {
     foreignKey: 'user_id'
@@ -8,16 +8,16 @@ User.hasMany(Item, {
 Item.belongsTo(User, {
     foreignKey: 'user_id'
 })
-User.hasMany(Review, {
+User.hasMany(Comment, {
     foreignKey: 'user_id'
 })
-Review.belongsTo(User, {
+Comment.belongsTo(User, {
     foreignKey: 'user_id'
 })
-Item.hasMany(Review, {
+Item.hasMany(Comment, {
 })
-Review.belongsTo(Item, {
+Comment.belongsTo(Item, {
     foreignKey: 'item_id'
 })
 
-module.exports = {User, Item, Review}
+module.exports = {User, Item, Comment}

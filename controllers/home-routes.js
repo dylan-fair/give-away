@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const {User, Item, Review} = require('../models')
+const {User, Item, Comment} = require('../models')
 
 
 router.get('/', (req,res)=>{
@@ -52,5 +52,55 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
     res.render('signup')
 })
+
+router.get('/items/:id', (req, res) => {
+    Item.findOne({
+      where: {
+        id: req.params.id
+      },
+      attributes: [
+        'id',
+        'name',
+        'url',
+        'item_text',
+        'created_at',
+      ],
+      include: [
+        {
+          model: Comment,
+          attributes: [  
+            'id',
+          'context',
+          'item_id',
+          'created_at',],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(dbItemData => {
+        if (!dbItemData) {
+          res.status(404).json({ message: 'No item found with this id' });
+          return;
+        }
+  
+        const item = dbItemData.get({ plain: true });
+  
+        res.render('single-item', {
+          item,
+          loggedIn: req.session.loggedIn
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
 
 module.exports = router;

@@ -28,7 +28,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "name", "review_rating"],
+    attributes: ["id", "name", "url", "item_text", "user_id"],
     include: [
       {
         model: Review,
