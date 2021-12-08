@@ -1,14 +1,14 @@
 const router = require("express").Router();
 //const sequelize = require("../../config/connection");
-const { User, Item, Review } = require("../../models");
+const { User, Item, Comment } = require("../../models");
 
 router.get("/", (req, res) => {
   Item.findAll({
     attributes: ["id", "name", "url","item_text", "user_id"],
     include: [
       {
-        model: Review,
-        attributes: ["id", "context", "rating"],
+        model: Comment,
+        attributes: ["id", "context"],
       },
       {
         model: User,
@@ -31,8 +31,8 @@ router.get("/:id", (req, res) => {
     attributes: ["id", "name", "url", "item_text", "user_id"],
     include: [
       {
-        model: Review,
-        attributes: ["id", "context", "rating"],
+        model: Comment,
+        attributes: ["id", "context"],
       },
       {
         model: User,
