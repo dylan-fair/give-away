@@ -3,7 +3,6 @@ async function newItem(event) {
     const name = document.querySelector('.titleInput').value.trim();
     const url = document.querySelector('.urlInput').value.trim();
     const item_text = document.querySelector('.textInput').value.trim();
-    console.log('It Works!')
 if(name && url && item_text){
    
     const response = await fetch('/api/items', {

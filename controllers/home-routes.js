@@ -46,9 +46,9 @@ router.get('/logout',(req,res)=>{
     }
 })
 
-router.get('/login', (req, res) => {
-    res.render('login');
-})
+// router.get('/login', (req, res) => {
+//     res.render('login');
+// })
 router.get('/signup', (req, res) => {
     res.render('signup')
 })
@@ -75,7 +75,7 @@ router.get('/items/:id', (req, res) => {
           'created_at',],
           include: {
             model: User,
-            attributes: ['username']
+            attributes: ['username' ,'profile_pic','profile_desc']
           }
         },
         {

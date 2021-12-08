@@ -381,3 +381,137 @@ form .text {
   background-color: rgba(104, 153, 137, 1);
 }
 /* Profile Page */
+
+/* comments */
+.comment-container {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex;
+  width: 500px;
+  box-shadow: 0 1px 5px rgb(204, 204, 204);
+  height: fit-content;
+}
+.comment-img {
+}
+.comment-img img {
+  height: 75px;
+  width: 75px;
+  margin: 5px;
+  box-shadow: 0 1px 5px rgb(204, 204, 204);
+}
+.comment-img p {
+  font-family: sans-serif;
+  font-style: normal;
+  margin-right: 0px;
+  font-weight: 800;
+  font-size: 15px;
+  color: rgba(104, 153, 137, 1);
+  margin: 1px;
+}
+.comment-name {
+  display: inline;
+}
+.comment-content {
+  overflow: hidden;
+  display: inline;
+  word-wrap: break-word;
+}
+.comment-content p {
+  margin: 5px;
+  margin-left: 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  overflow: auto;
+}
+/* comments */
+.p-main-img img {
+  width: 100%;
+}
+
+.p-cards {
+  display: flex;
+  overflow-x: auto;
+}
+.p-card {
+  margin: 0.5rem;
+  box-shadow: 0px 5px 10px rgb(214, 214, 214);
+  height: 350px;
+}
+.p-card-text {
+  text-overflow: ellipsis;
+}
+.p-card-body {
+  padding: 1rem;
+}
+
+.p-meta {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: rgb(77, 77, 77);
+}
+.p-post-date {
+  color: rgb(0, 162, 255);
+  position: absolute;
+  bottom: 0.2rem;
+  right: 1rem;
+  text-transform: uppercase;
+  font-size: 80%;
+}
+#p-card {
+  margin: 0.5rem;
+  box-shadow: 0px 5px 10px rgb(214, 214, 214);
+  height: fit-content;
+}
+.p-posted-user {
+  color: #fff;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  background-color: burlywood;
+  padding: 0.3rem 1rem;
+  text-transform: uppercase;
+  font-size: 80%;
+  border-radius: 45px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.164);
+}
+
+.p-card-container {
+  width: 100%;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.comment-textarea {
+  width: 35rem;
+  height: 150px;
+  border-radius: 15px;
+}
+
+.detail-view {
+  position: absolute;
+  left: 0;
+  margin: 5px;
+  border: none;
+  padding: 15px;
+}
+.detail-view:hover {
+  margin: 5px;
+  border: none;
+  padding: 15px;
+  color: rgb(0, 162, 255);
+}
+.comment-btn {
+  margin: 5px;
+  border: none;
+  padding: 15px;
+  transition: 1s;
+}
+
+.comment-btn:hover {
+  background-color: #777;
+  transition: 1s;
+}

@@ -1,32 +1,35 @@
-
-
-<div class="card-container">
-<div class="card" style="width: 13rem;">
+<center>
+<div class="p-card-container">
+<div class="card" id="p-card" style="width: 35rem;">
   <img src="{{item.url}}" class="card-img-top" alt="...">
-  <div class="card-body">
-      <h5 class="title"> {{item.name}}</h5>
-    <p class="card-text">{{item.item_text}} </p>
-    <p class="meta">
-       <a href="/profile{{user.id}}"> <span class="posted-user">{{item.username}}</span></a>
-         <span class="post-date">Posted {{format_date createdAt}}</span>
+  <div class="p-card-body">
+      <h5 class="p-title"> {{item.name}}</h5>
+    <p class="p-card-text">{{item.item_text}} </p>
+    <p class="p-meta">
+     <span class="p-posted-user">{{item.user.username}}</span>
+         <span class="p-post-date">Posted {{format_date createdAt}}</span>
         </p>
   </div>
 </div>
 </div>
 </div>
+</center>
 {{#if loggedIn}}
+<center>
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" class="comment-textarea"></textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button type="click" class="comment-btn">add comment</button>
   </div>
 </form>
+</center>
 {{/if}}
-
+<center>
 {{> comments item.comments}}
+</center>
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
