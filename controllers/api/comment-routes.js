@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     });
 });
 // Create a new comment
-router.post('/', (req, res) => {
+router.post('/', withAuth,(req, res) => {
   Comment.create({
     context: req.body.context,
     item_id: req.body.item_id,
