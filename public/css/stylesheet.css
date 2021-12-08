@@ -18,7 +18,7 @@ footer {
   background-color: #fff;
   text-align: center;
   box-shadow: 1px 0 5px rgb(216, 216, 216);
-  height: auto;
+  height: 30px;
   margin-top: 1rem;
 }
 footer h1 {
@@ -46,6 +46,8 @@ footer h1 {
 .links li a:hover {
   color: rgba(104, 153, 137, 1);
 }
+
+/* Login And Sign Up Forms  */
 .login-btn {
   padding: 10px 25px;
   background-color: rgba(104, 153, 137, 1);
@@ -165,8 +167,9 @@ form .text {
 .text input:valid ~ label {
   top: -5px;
 }
+/* Login And Sign Up Forms  */
 
-/* SUBJECT TO CHANGE */
+/* Item Cards */
 .main-img img {
   width: 100%;
 }
@@ -223,7 +226,7 @@ form .text {
 .title {
   text-transform: uppercase;
 }
-/* SUBJECT TO CHANGE */
+/* Item Cards*/
 
 /* CREATE FORM */
 .form-floating {
@@ -237,26 +240,25 @@ form .text {
   justify-content: center;
 }
 .cForm-container {
-  width: 50%;
-  height: 100%;
-  float: left;
+  margin: 2rem;
+  width: 100%;
 }
 
 #floatingUrl {
   height: 50px;
-  width: 100%;
+  width: 70%;
   border-radius: 15px;
 }
 
 #floatingTitle {
   height: 50px;
-  width: 100%;
+  width: 70%;
   border-radius: 15px;
 }
 
 #floatingText {
   height: 50px;
-  width: 100%;
+  width: 70%;
   border-radius: 15px;
 }
 .aBtn {
@@ -264,7 +266,12 @@ form .text {
   padding: 15px;
   border: none;
   border-radius: 5px;
-  width: 80%;
+  width: 70%;
+}
+
+.profile-link {
+  float: right;
+  margin-right: 3rem;
 }
 /* CREATE FORM */
 
