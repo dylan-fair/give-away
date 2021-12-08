@@ -32,9 +32,9 @@ N/A
 ## Questions
 
 Here's a link to Our Github Profiles.
-https://github.com/jovan-png
-https://github.com/vic-smith
-https://github.com/dylan-fair
+- https://github.com/jovan-png
+- https://github.com/vic-smith
+- https://github.com/dylan-fair
 
 ## License
 
