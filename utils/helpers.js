@@ -1,10 +1,7 @@
 const dayjs = require('dayjs')
 module.exports = {
     format_date: date => {
-      const formatDate = `${new Date(date).getMonth() + 1}-${new Date(date).getDate()}-${new Date(
-        date
-      ).getFullYear()}`;
-      return dayjs(formatDate).format('MM/DD/YYYY')
+      return dayjs(date).format('MM/DD/YYYY')
     },
     format_url: url => {
       return url
