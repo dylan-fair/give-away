@@ -1,27 +1,33 @@
-{{ post-info post }}
 
+
+<div class="card-container">
+<div class="card" style="width: 13rem;">
+  <img src="{{item.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+      <h5 class="title"> {{item.name}}</h5>
+    <p class="card-text">{{item.item_text}} </p>
+    <p class="meta">
+       <a href="/profile{{user.id}}"> <span class="posted-user">{{item.username}}</span></a>
+         <span class="post-date">Posted {{format_date createdAt}}</span>
+        </p>
+  </div>
+</div>
+</div>
+</div>
 {{#if loggedIn}}
-<form class="review-form">
+<form class="comment-form">
   <div>
-    <textarea name="review-body"></textarea>
-    <select name="reviews" id="rating">
-      <option value="1">1-star</option>
-      <option value="2">2-star</option>
-      <option value="3">3-star</option>
-      <option value="4">4-star</option>
-      <option value="5">5-star</option>
-    </select>
+    <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button type="submit">add review</button>
-    <button type="button" class="upvote-btn"></button>
+    <button type="submit">add comment</button>
   </div>
 </form>
 {{/if}}
 
-{{> reviews post.reviews}}
+{{> comments item.comments}}
 
 {{#if loggedIn}}
-<script src="/public/javascript/review.js"></script>
+<script src="/javascript/comment.js"></script>
 {{/if}}
