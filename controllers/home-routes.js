@@ -6,12 +6,6 @@ const {User, Item, Review} = require('../models')
 router.get('/', (req,res)=>{
     console.log(req.session)
     Item.findAll({
-        attributes: [
-            'id',
-            'name',
-            'url',
-            'item_text'
-        ],
         include:{
             model: User,
             attributes:['username']
