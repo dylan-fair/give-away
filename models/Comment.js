@@ -13,9 +13,7 @@ Comment.init({
     context: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-            len: [0, 50]
-        }
+        
     },
 
     user_id:{
