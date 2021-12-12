@@ -60,6 +60,7 @@ footer h1 {
 .login-btn:hover {
   background-color: rgba(104, 153, 137, 0.7);
 }
+
 a:visited {
   text-decoration: none;
 }
@@ -226,6 +227,17 @@ form .text {
 .title {
   text-transform: uppercase;
 }
+
+.pending-btn {
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: rgb(250, 198, 67);
+}
+.delete-btn {
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: rgb(180, 30, 10);
+}
 /* Item Cards*/
 
 /* CREATE FORM */
@@ -391,8 +403,6 @@ form .text {
   width: 500px;
   box-shadow: 0 1px 5px rgb(204, 204, 204);
   height: fit-content;
-}
-.comment-img {
 }
 .comment-img img {
   height: 75px;
