@@ -175,6 +175,9 @@ form .text {
   width: 100%;
 }
 
+.card-img-top {
+  max-height: 175px;
+}
 .cards {
   display: flex;
   overflow-x: auto;
