@@ -1,8 +1,10 @@
-# GiveAway
+# GiveAway ![License](https://img.shields.io/badge/MIT-blue)
 
-![License](https://img.shields.io/badge/MIT-blue)
+[GiveAway](https://safe-beyond-95818.herokuapp.com/)
 
 ## Description
+
+Welcome to our Prject Two application. Our application is a free to use website is a platform for individuals to give away items they no longer need. The user(s) need to sign in to create and comment on listings. Once signed in, the user(s) can create a personal portfolio to share information about themselves, indicate the availability of their items or delete their listing.
 
 ## Tables Of Contents
 
@@ -12,7 +14,7 @@
 - [Contributing](#Contributing)
 - [Tests](#Tests)
 - [Questions](#Questions)
-
+- [Screenshot](#Screenshot)
 ## Contributing
 
 Made By Dylan, Jovan and Victor.
@@ -59,3 +61,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Screenshot
+![screenshot](GiveAway.png)
